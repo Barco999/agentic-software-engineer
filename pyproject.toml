@@ -1,0 +1,19 @@
+[project]
+name = "agentic-url-shortener"
+version = "1.0.0"
+description = "Governed LangGraph engineering workflow and FastAPI URL shortener"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+exclude = ["var", ".venv", "evidence"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E501"]

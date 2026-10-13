@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: agentic-url-shortener
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: APP_BASE_URL
+        sync: false
+      - key: LLM_PROVIDER
+        value: gemini
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        sync: false
+      - key: DEMO_MODE
+        value: "false"
+# No persistent/paid disk is provisioned by this blueprint.
+# Configure durable storage manually before treating data as persistent.
